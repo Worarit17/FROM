@@ -6,119 +6,165 @@
   <style>
     body {
       font-family: 'Sarabun', sans-serif;
-      background: linear-gradient(to bottom right, #e8ccff, #c29eff);
+      background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 50%, #d2b4de 100%);
       margin: 0;
       padding: 2rem;
-      color: #3d0066;
+      color: #2e003e;
     }
-    header {
+
+    h1 {
       text-align: center;
+      font-size: 2.2rem;
+      color: #fff;
+      text-shadow: 2px 2px 6px #5e2a84;
+    }
+
+    form {
+      background: rgba(255, 245, 255, 0.95);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(140, 60, 200, 0.4);
+      max-width: 800px;
+      margin: auto;
+    }
+
+
+
+    nav {
+      text-align: center;   
       margin-bottom: 1.5rem;
     }
-    nav {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    nav a {
-      background-color: #8a2be2;
-      color: white;
-      padding: 0.5rem 1.5rem;
-      border-radius: 10px;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    nav a:hover {
-      background-color: #6a1ca7;
-    }
-    form {
-      background: #f8e6ff;
-      padding: 2rem;
+    fieldset {
+      border: 2px solid #c39bd3;
+      padding: 1rem;
+      margin-top: 1.5rem;
       border-radius: 12px;
-      max-width: 720px;
-      margin: auto;
-      box-shadow: 0 4px 15px rgba(70, 0, 100, 0.3);
     }
+
+    legend {
+      padding: 0 1rem;
+      font-weight: bold;
+      color: #6c3483;
+      font-size: 1.1rem;
+    }
+
     label {
       font-weight: bold;
-      margin-top: 1rem;
       display: block;
+      margin-top: 1rem;
+      color: #4a235a;
     }
-    input, select, textarea {
+
+    input[type="text"],
+    input[type="number"],
+    input[type="url"],
+    input[type="date"],
+    select,
+    textarea {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.6rem;
       margin-top: 0.4rem;
+      border-radius: 10px;
+      border: 1px solid #bb8fce;
+      background: #faf5ff;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f2e0ff;
+      padding: 0.4rem 0.8rem;
       border-radius: 8px;
-      border: 1px solid #b366ff;
+      box-shadow: 0 2px 4px rgba(80, 0, 100, 0.2);
     }
-    .button-group {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .button-group input[type="submit"] {
-      background-color: #8a2be2;
+
+    .submit-btn {
+      background: linear-gradient(to right, #a569bd, #7d3c98);
       color: white;
       border: none;
-      padding: 0.75rem 2rem;
-      border-radius: 10px;
+      padding: 0.8rem 2rem;
+      border-radius: 12px;
       cursor: pointer;
-    }
-    .button-group input[type="submit"]:hover {
-      background-color: #6a1ca7;
-    }
-    .section-title {
+      font-size: 1rem;
       margin-top: 2rem;
-      font-size: 1.2rem;
-      text-decoration: underline;
+      box-shadow: 0 4px 15px rgba(90, 0, 120, 0.4);
+      display: block;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(to right, #884ea0, #6c3483);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>ระบบจัดการสินค้า</h1>
-    <h2>ของที่ระลึกครบรอบ 30 ปี<br/>สาขาวิชาวิทยาการคอมพิวเตอร์</h2>
-  </header>
-
+  <h1>ของที่ระลึกครบรอบ 30 ปี<br/>สาขาวิชาวิทยาการคอมพิวเตอร์</h1>
   <nav>
     <a href="Custommer.html">ไปยังหน้าลูกค้า</a>
   </nav>
 
   <form>
-    <div class="section-title">เลือกซื้อของที่ระลึก</div>
-    <label for="product-type">ประเภทสินค้า</label>
-    <select id="product-type" name="product-type">
-    <option value="">-- กรุณาเลือกประเภทสินค้า --</option>
-    <option value="shirt">เสื้อ</option>
-    <option value="hat">หมวก</option>
-    <option value="umbrella">ร่ม</option>
-    <option value="pin">เข็มกลัด</option>
-    <option value="notebook">สมุด</option>
-    <option value="pen">ปากกา</option>
-    <option value="bag">กระเป๋า</option>
-    <option value="mug">แก้ว</option>
-    </select>
-    
-    
-    <label for="shirt-size">ขนาดเสื้อ</label>
-    <select id="shirt-size">
-      <option>XS</option><option>S</option><option>M</option>
-      <option>L</option><option>XL</option><option>XXL</option>
-    </select>
+    <fieldset>
+      <legend>เลือกประเภทสินค้า</legend>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="shirt"> เสื้อ</label></div>
+    <label for="price">ราคา 320(บาท)</label>
+<div class="checkbox-group">
+      <label><input type="checkbox" name="items" value="bag"> กระเป๋า</label></div>
+        <label for="price">ราคา 300(บาท)</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="hat"> หมวก</label></div>
+        <label for="price">ราคา 240(บาท)</label>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="umbrella"> ร่ม</label></div>
+        <label for="price">ราคา 150(บาท)</label>
+        <div class="checkbox-group"></div>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="pin"> เข็มกลัด</label></div>
+        <label for="price">ราคา 100(บาท)</label>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="notebook"> สมุด</label></div>
+        <label for="price">ราคา 110(บาท)</label>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="pen"> ปากกา</label></div>
+        <label for="price">ราคา 50(บาท)</label>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="mug"> แก้ว</label></div>
+        <label for="price">ราคา 199(บาท)</label>
 
-    <label for="shirt-color">สีของเสื้อ</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>รายละเอียดสินค้าเพิ่มเติม</legend>
+      <label for="img">รูปภาพ</label>
+      <img src="https://img2.pic.in.th/pic/IMG_5885.jpeg" alt="IMG 5885" style="width: 100%; border-radius: 10px; margin-top: 0.5rem; box-shadow: 0 4px 15px rgba(80, 0, 120, 0.2);" />
+      
+      
+      <label for="shirt-color">สีของเสื้อ</label>
     <select id="shirt-color">
       <option>ขาว</option>
       <option>น้ำเงิน</option>
-    </select>
-    <label for="cup-image">รูปภาพ</label>
-    <img src="https://i.ibb.co/GvwCHR68/df1944c4-a41d-4833-a3c6-d2ef9138c4dd.jpg" >
     
-    <label for="shirt-price">ราคา</label>
-    <input type="number" id="shirt-price" min="0" />
+    </select>
+      <label for="size">ขนาด (ถ้ามี)</label>
+      <input type="text" id="size" placeholder="เช่น S,M,XS,L,XL,XXl" />
 
+      
 
-    <div class="button-group">
-      <input type="submit" value="บันทึกข้อมูลทั้งหมด" />
-    </div>
+      <label for="size">อื่นๆ</label>
+      <input type="text" id="size" placeholder=" " />
+    </fieldset>
+
+    <button type="submit" class="submit-btn">บันทึกสินค้า</button>
   </form>
 </body>
 </html>

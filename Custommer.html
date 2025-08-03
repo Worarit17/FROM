@@ -2,82 +2,127 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <title>ลูกค้า | ร้านที่ระลึก 30 ปี</title>
+  <title>ลูกค้า | ร้านของที่ระลึก 30 ปี</title>
   <style>
     body {
       font-family: 'Sarabun', sans-serif;
-      background: linear-gradient(to top left, #f1d9ff, #e0c0ff);
+      background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 50%, #d2b4de 100%);
       margin: 0;
       padding: 2rem;
-      color: #3a0057;
+      color: #2e003e;
     }
-    header {
+
+    h1 {
       text-align: center;
+      font-size: 2.2rem;
+      color: #fff;
+      text-shadow: 2px 2px 6px #5e2a84;
+    }
+
+    form {
+      background: rgba(255, 245, 255, 0.95);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(140, 60, 200, 0.4);
+      max-width: 800px;
+      margin: auto;
+    }
+
+
+
+    nav {
+      text-align: center;   
       margin-bottom: 1.5rem;
     }
-    .top-link {
-      text-align: left;
-      margin-bottom: 1rem;
-    }
-    .top-link a {
-      background-color: #9932cc;
-      color: white;
-      padding: 0.5rem 1.5rem;
-      border-radius: 10px;
-      text-decoration: none;
-    }
-    .top-link a:hover {
-      background-color: #7a199f;
-    }
-    form {
-      background: #fff0ff;
-      padding: 2rem;
+    fieldset {
+      border: 2px solid #c39bd3;
+      padding: 1rem;
+      margin-top: 1.5rem;
       border-radius: 12px;
-      max-width: 720px;
-      margin: auto;
-      box-shadow: 0 4px 15px rgba(80, 0, 120, 0.2);
     }
-    label {
-      display: block;
+
+    legend {
+      padding: 0 1rem;
       font-weight: bold;
+      color: #6c3483;
+      font-size: 1.1rem;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1rem;
+      color: #4a235a;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="url"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.4rem;
+      border-radius: 10px;
+      border: 1px solid #bb8fce;
+      background: #faf5ff;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
       margin-top: 1rem;
     }
-    input, select, textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.3rem;
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f2e0ff;
+      padding: 0.4rem 0.8rem;
       border-radius: 8px;
-      border: 1px solid #ca80ff;
+      box-shadow: 0 2px 4px rgba(80, 0, 100, 0.2);
     }
-    .button-group {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .button-group input[type="submit"] {
-      background-color: #9932cc;
+
+    .submit-btn {
+      background: linear-gradient(to right, #a569bd, #7d3c98);
       color: white;
-      padding: 0.75rem 2rem;
-      border-radius: 10px;
       border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 12px;
       cursor: pointer;
+      font-size: 1rem;
+      margin-top: 2rem;
+      box-shadow: 0 4px 15px rgba(90, 0, 120, 0.4);
+      display: block;
+      width: 100%;
     }
-    .button-group input[type="submit"]:hover {
-      background-color: #7a199f;
+
+    .submit-btn:hover {
+      background: linear-gradient(to right, #884ea0, #6c3483);
     }
+    
   </style>
 </head>
 <body>
 
-  <div class="top-link">
-    <a href="index.html">← กลับไปหน้าแอดมิน</a>
-  </div>
+  
 
+  
   <header>
+    <h1>เลือกซื้อของที่ระลึกครบรอบ 30 ปี</h1>
     <h1>ฟอร์มลูกค้า</h1>
-    <h2>เลือกซื้อของที่ระลึกครบรอบ 30 ปี</h2>
+    <nav>
+    <div class="top-link">
+    <a href="index.html"> กลับไปหน้าแอดมิน</a>
+  </div>
+  </nav>
   </header>
 
   <form>
+    <fieldset>
     <label for="name">ชื่อ - นามสกุล</label>
     <input type="text" id="name" name="name" required />
 
@@ -86,24 +131,43 @@
 
     <label for="address">ที่อยู่</label>
     <textarea id="address" name="address" rows="3" required></textarea>
+    </fieldset>
+    <form>
+    <fieldset>
+      <legend>เลือกประเภทสินค้า</legend>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="shirt"> เสื้อ</label></div>
+    <label for="price">ราคา 320(บาท)</label>
+<div class="checkbox-group">
+      <label><input type="checkbox" name="items" value="bag"> กระเป๋า</label></div>
+        <label for="price">ราคา 300(บาท)</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="hat"> หมวก</label></div>
+        <label for="price">ราคา 240(บาท)</label>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="umbrella"> ร่ม</label></div>
+        <label for="price">ราคา 150(บาท)</label>
+        <div class="checkbox-group"></div>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="pin"> เข็มกลัด</label></div>
+        <label for="price">ราคา 100(บาท)</label>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="notebook"> สมุด</label></div>
+        <label for="price">ราคา 110(บาท)</label>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="pen"> ปากกา</label></div>
+        <label for="price">ราคา 50(บาท)</label>
+        <div class="checkbox-group">
+        <label><input type="checkbox" name="items" value="mug"> แก้ว</label></div>
+        <label for="price">ราคา 199(บาท)</label>
 
-    <label for="product">เลือกรายการสินค้า</label>
-    <select id="product" name="product" required>
-      <option value="">-- กรุณาเลือกสินค้า --</option>
-      <option>เสื้อ</option>
-      <option>หมวก</option>
-      <option>ร่ม</option>
-      <option>เข็มกลัด</option>
-      <option>สมุด</option>
-      <option>ปากกา</option>
-      <option>กระเป๋า</option>
-      <option>แก้ว</option>
-    </select>
+      </div>
+    </fieldset>
     <label for="cup-image">รูปภาพ</label>
     <img src="https://i.ibb.co/GvwCHR68/df1944c4-a41d-4833-a3c6-d2ef9138c4dd.jpg"  >
  
      
-    <label for="details">รายละเอียดเพิ่มเติม (ขนาด, สี ฯลฯ)</label>
+    <label for="details">รายละเอียดเพิ่มเติม </label>
     <textarea id="details" name="details" rows="2"></textarea>
 
     <label for="slip">แนบรูปสลิปชำระเงิน</label>
@@ -127,9 +191,6 @@
       <option>PromptPay</option>
     </select>
 
-    <div class="button-group">
-      <input type="submit" value="ส่งคำสั่งซื้อ" />
-    </div>
-  </form>
-</body>
-</html>
+
+   <button type="submit" class="submit-btn">ส่งคำสั่งซื้อ</button>
+   
