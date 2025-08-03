@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>แอดมิน | ร้านของที่ระลึก 30 ปี</title>
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background: linear-gradient(to bottom right, #e8ccff, #c29eff);
+      margin: 0;
+      padding: 2rem;
+      color: #3d0066;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      background-color: #8a2be2;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    nav a:hover {
+      background-color: #6a1ca7;
+    }
+    form {
+      background: #f8e6ff;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 720px;
+      margin: auto;
+      box-shadow: 0 4px 15px rgba(70, 0, 100, 0.3);
+    }
+    label {
+      font-weight: bold;
+      margin-top: 1rem;
+      display: block;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.4rem;
+      border-radius: 8px;
+      border: 1px solid #b366ff;
+    }
+    .button-group {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .button-group input[type="submit"] {
+      background-color: #8a2be2;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .button-group input[type="submit"]:hover {
+      background-color: #6a1ca7;
+    }
+    .section-title {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ระบบจัดการสินค้า</h1>
+    <h2>ของที่ระลึกครบรอบ 30 ปี<br/>สาขาวิชาวิทยาการคอมพิวเตอร์</h2>
+  </header>
+
+  <nav>
+    <a href="custommer.html">ไปยังหน้าลูกค้า</a>
+  </nav>
+
+  <form>
+    <div class="section-title">เลือกซื้อของที่ระลึก</div>
+    <label for="product-type">ประเภทสินค้า</label>
+    <select id="product-type" name="product-type">
+    <option value="">-- กรุณาเลือกประเภทสินค้า --</option>
+    <option value="shirt">เสื้อ</option>
+    <option value="hat">หมวก</option>
+    <option value="umbrella">ร่ม</option>
+    <option value="pin">เข็มกลัด</option>
+    <option value="notebook">สมุด</option>
+    <option value="pen">ปากกา</option>
+    <option value="bag">กระเป๋า</option>
+    <option value="mug">แก้ว</option>
+    </select>
+    
+    
+    <label for="shirt-size">ขนาดเสื้อ</label>
+    <select id="shirt-size">
+      <option>XS</option><option>S</option><option>M</option>
+      <option>L</option><option>XL</option><option>XXL</option>
+    </select>
+
+    <label for="shirt-color">สีของเสื้อ</label>
+    <select id="shirt-color">
+      <option>ขาว</option>
+      <option>น้ำเงิน</option>
+    </select>
+    <label for="cup-image">รูปภาพ</label>
+    <img src="https://i.ibb.co/GvwCHR68/df1944c4-a41d-4833-a3c6-d2ef9138c4dd.jpg" >
+    
+    <label for="shirt-price">ราคา</label>
+    <input type="number" id="shirt-price" min="0" />
+
+
+    <div class="button-group">
+      <input type="submit" value="บันทึกข้อมูลทั้งหมด" />
+    </div>
+  </form>
+</body>
+</html>
